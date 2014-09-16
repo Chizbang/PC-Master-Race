@@ -1,0 +1,154 @@
+body, html{
+	padding:0px;
+	margin:0px;
+}
+
+#head{
+	width:100%;
+	height:200px;
+	background-image: url('../media/head.png');
+	background-size: cover;
+	background-position-x: 0px;
+}
+#headabove{
+	background-image: url('../media/finalhead.png');
+	width:600px;
+	height:200px;
+	margin: 0px auto;
+}
+#nav{
+	width:100%;
+	height:50px;
+	background-color: rgb(231, 188, 53);
+	float:left;
+}
+#navabove{
+	height:50px;
+	width:600px;
+	margin:0px auto;
+}
+#navabove ul{
+	list-style: none;
+	margin:0px auto;
+	height: 100%;
+	display:table;
+	padding: 0px;
+}
+#navabove li{
+	vertical-align: middle;
+	display: table-cell;
+	padding-left:10px;
+	padding-right:10px;
+	height:100%;
+	font-family:arial;
+	font-size:16px;
+}
+#navabove li:hover{
+}
+#contain{
+	width:600px;
+	min-height:400px;
+	margin:0px auto;
+	margin-top: 50px;
+	background-color: rgb(245, 245, 245);
+	padding:18px;
+	overflow: auto;
+}
+#contain h2{
+	font-family: 'Source Sans Pro',arial,sans-serif;
+	margin:0px;
+	padding:0px;
+	color: rgb(78, 78, 78);
+}
+#contain p{
+	font-family: 'Source Sans Pro',arial,sans-serif;
+}
+.edit{
+font-size: 10px;
+color: blue;
+text-decoration: underline;
+}
+#infoHeadEdit{
+	border: none;
+	background-color: rgba(255,255,255, 0);
+	width: 440px;
+	height: 30px;
+	font-family: 'Source Sans Pro',arial,sans-serif;
+	outline: none;
+	font-weight: bold;
+	color: rgb(78, 78, 78);
+	font-size: 24px;
+}
+#infoContentParaEdit{
+	font-family: 'Source Sans Pro',arial,sans-serif;
+	font-size: 16px;
+	border:none;
+	width:600px;
+	height:200px;
+	background-color:rgba(255, 255, 255, 0);
+}
+#titlecontain{
+	height:30px;
+	width:600px;
+}
+#titlecontain h2, input, span{
+	float:left;
+}
+.journeyButton {
+	text-align: center;
+	color: black;
+	text-decoration: none;
+}
+.journeyButton div{
+	width: 100%;
+	height: 18px;
+	padding-bottom: 9px;
+	padding-top: 9px;
+	background-color: rgb(224, 224, 224);
+	border: 1px solid black;
+	border-radius: 4px;
+}
+#pagesList{
+	float: left;
+	width: 100px;
+}
+#pagesList ul{
+	font-family: arial;
+	list-style: none;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+#newPageMenu{
+	width: 500px;
+	height: 400px;
+	float: left;
+}
+#newPageMenu select, input, textarea{
+	width:100%;
+}
+.swMain ul.anchor li a{
+	width:50px;
+}
+.swMain ul.anchor{
+	display:none;
+}
+.swMain {
+	width:600px;
+}
+.swMain .stepContainer div.content {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	width: 98%;
+}
+.swMain .buttonFinish {
+	display: none;
+}
+#content{
+	font-family: 'Source Sans Pro',arial,sans-serif;
+	font-size: 16px;
+	background-color: rgba(255,255,255,0);
+	border: 0px;
+	padding-top: 12px;
+	height: 356px;
+}

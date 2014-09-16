@@ -1,0 +1,16 @@
+<div ng-show="pageType == 'classic'">
+	<input ng-model="path" placeholder="Path Name (eg: mypage == myapp/#/mypage)"/>
+	<input ng-model="dispname" placeholder="Display Name"/>
+	<input ng-model="header" placeholder="Header"/>
+	<textarea ng-model="pageContent" placeholder="Content"></textarea>
+	<button ng-click="addNewPage();">Submit</button>
+</div>
+<div id="wizzard" ng-show="pageType == 'wizard'">
+	<input ng-model="path" placeholder="Path Name (eg: mypage == myapp/#/mypage)"/>
+	<input ng-model="dispname" placeholder="Display Name"/>
+	<input ng-model="header" placeholder="Header"/>
+	
+	<button ng-click="addNewStage()" newstage>New step</button>
+	<button data-ng-click="addNewPage()" newstage>Save page</button>
+	<textarea ng-repeat="steps in wizardSteps" ng-model="steps.content"></textarea>
+</div>

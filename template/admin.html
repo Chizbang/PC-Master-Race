@@ -1,0 +1,20 @@
+<form action="api/login.php" method="POST">
+		<input type="image" src="http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_small.png" ng-hide="adminStatus">
+		</form>
+		<div ng-show="adminStatus" ng-controller="admin as adminCtrl">
+			<div id="pagesList">
+				<ul>
+					<li ng-repeat="link in adminCtrl.availablePages" id="availPages">
+						{{link.name}}
+					</li>
+				</ul>
+			</div>
+			<div id="newPageMenu">
+				<select ng-model="pageType" placeholder="Page style">
+					<option ng-repeat="templateType in adminCtrl.availableTemplates" value="{{templateType.name}}">{{templateType.dispname}}</option>
+				</select>
+					<form name="newPageForm">
+						<newinfo></newinfo>
+					</form>
+			</div>
+		</div>

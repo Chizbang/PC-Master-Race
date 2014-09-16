@@ -1,0 +1,4 @@
+<div id="infoContent" ng-controller="infoController as info">
+	<h2>{{info.content1[0].header}}</h2>
+	<p ng-bind-html="info.content1[0].content | unsafe"></p>
+</div>

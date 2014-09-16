@@ -1,0 +1,9 @@
+<script src="scripts/jquery.smartWizard.js"></script>
+<div id="wizCont" ng-controller="wizardController as wizCont">
+    
+    <div id="wizard" class="swMain">
+        <div ng-repeat="steps in wizCont.content1[0]['extra']" id="step-{{$index+1}}" steps>
+            {{steps.content}}
+        </div>
+    </div>
+</div>

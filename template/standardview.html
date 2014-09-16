@@ -1,0 +1,5 @@
+
+<div id="infoContent" ng-controller="infoController as info"> 
+	<div id="titlecontain"><h2 id="infoHead" ng-hide="info.editTitle" ng-bind="info.content1[0].header"></h2><input id="infoHeadEdit" ng-show="info.editTitle" ng-model="info.content1[0].header"><div ng-hide="info.editTitle"><span class="edit" ng-click="info.editTitle = true" ng-show="adminStatus">edit</span></div><div ng-show="info.editTitle"><span class="edit" ng-click="saveChanges('head'); info.editTitle = false; " ng-show="adminStatus">save</span></div></div>
+	<p ng-bind-html="info.content1[0].content | unsafe" id="infoContentPara" ng-hide="info.editContent"></p><textarea id="content" ng-show="info.editContent" ng-model="info.editContentContent[0].content"></textarea><div ng-hide="info.editContent"><span class="edit" ng-click="info.editContent = true" ng-show="adminStatus">edit</span></div><div ng-show="info.editContent"><span class="edit" ng-click="saveChanges('content'); info.editContent = false;" ng-show="adminStatus">save</span></div>
+</div>

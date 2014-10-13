@@ -1,20 +1,17 @@
 <?php
-include('class/class_database.php');
+include('class/class_users.php');
 if(!isset($_SESSION)){
 	session_start();
 	
 	if(!isset($_SESSION['steamid'])){
-		echo json_encode(["error"=>"204"]);
+		echo json_encode(["error"=>"invalid_user"]);
 		return;
 	}
-
-	//Make sure to take advantage of the user class.
 	
+	$user = new User();
+	$adminCheck = $user->isAdmin($_SESSION['steamid']);
 	
-	$checkQuery = new Database();
-	$query = $checkQuery->preparedQuery("SELECT * FROM users WHERE steamid=?", array($_SESSION['steamid']))->fetchAll(PDO::FETCH_ASSOC);
-	
-	if(empty($query)){
+	if(empty($adminCheck)){
 		echo json_encode(["error"=>"not_admin"]);
 		return;
 	} else{

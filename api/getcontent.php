@@ -1,12 +1,16 @@
 <?php
-require_once('class/class_database.php');
 require_once("class/Parsedown.php");
+require_once('class/class_pages.php');
+
+if(!isset($_GET['page'])){
+	echo json_encode(["error"=>"invalid_page"]);
+	return;
+}
 
 $Parsedown = new Parsedown();
+$page = new Pages();
 
-$fetchContentDB = new Database();
-$result = $fetchContentDB->preparedQuery("SELECT * FROM content WHERE name = ?", array($_GET['page']))->fetchAll(PDO::FETCH_ASSOC);
-
+$result = $page->getContent($_GET['page']);
 
 if($result){
 	$result[0]['content'] = $Parsedown->text($result[0]['content']);

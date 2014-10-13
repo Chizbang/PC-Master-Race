@@ -1,11 +1,12 @@
 <?php
-include('class/class_database.php');
-$fetchAllDB = new Database();
-$result = $fetchAllDB->preparedQuery("SELECT * FROM pages", array())->fetchAll(PDO::FETCH_ASSOC);
+include('class/class_pages.php');
+
+$fetchAllPages = new Pages();
+$result = $fetchAllPages->getPages();
+
 if($result){
 	echo json_encode($result);
 } else {
-
 }
 
 

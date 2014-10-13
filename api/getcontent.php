@@ -16,5 +16,5 @@ if($result){
 	$result[0]['content'] = $Parsedown->text($result[0]['content']);
 	echo json_encode($result);
 } else{
-
+	echo json_encode(["error"=>"no_content"]);
 }
